@@ -29,7 +29,7 @@
 		$("body").removeClass("locked");
 	});
 
-	//03. offcanvas popup js 
+	//03. offcanvas popup js
 
 	$(".xc-offcanvas-open-btn").on("click", function () {
 		$(".xc-mobile-nav__wrapper").toggleClass("opened");
@@ -94,7 +94,7 @@
 		}
 	});
 
-	// 07. Back Top Top 
+	// 07. Back Top Top
 	var btn = $('#xc_back-to-top');
 	var btn_wrapper = $('.xc-back-to-top-wrapper');
 
@@ -326,7 +326,7 @@
 			});
 		}
 	}
-	//   custom cursor 
+	//   custom cursor
 
 	const cursor = document.querySelector('#xc-cursor');
 	const cursorCircle = cursor.querySelector('.xc-cursor__circle');
@@ -459,10 +459,13 @@
 					$(form).attr("action"),
 					$(form).serialize(),
 					function (response) {
-						$(form).parent().find(".result").append(response);
-						$(form).find('input[type="text"]').val("");
-						$(form).find('input[type="email"]').val("");
-						$(form).find("textarea").val("");
+                        if(response){
+                            $(form).parent().find(".result").append('<p class="message-contact">درخواست شما با موفقیت ثبت و در صف بررسی قرار گرفت.</p>');
+                            $(form).find('input[type="text"]').val("");
+                            $(form).find('input[type="email"]').val("");
+                            $(form).find("textarea").val("");
+                            $(form).find("button").attr("disabled","disabled");
+                        }
 					}
 				);
 				return false;

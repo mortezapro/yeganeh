@@ -32,7 +32,7 @@
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 <div class="xc-page-wrapper">
-    @include("front.partials.xaito.header")
+    @include("front.partials.xaito.header-dark")
     <div id="xc-cursor">
         <div class="xc-cursor__circle"></div>
     </div>
@@ -94,6 +94,7 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
             @yield("content")
+            @include("front.partials.xaito.footer")
         </div>
     </div>
 </div>

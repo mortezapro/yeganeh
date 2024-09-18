@@ -1,4 +1,4 @@
-@extends("front.layouts.xaito")
+@extends("front.layouts.xaito-dark")
 @section("head")
     <title>صفحه‌اصلی | {{ env("APP_NAME") }}</title>
     <meta name="description" content="توضیحات صفحه‌اصلی">
@@ -15,7 +15,6 @@
     @include("front.home.faq")
     @include("front.home.blog")
     @include("front.home.cta")
-    @include("front.partials.xaito.footer")
 @endsection
 
 @section("scripts")
