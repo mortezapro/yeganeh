@@ -1,0 +1,15 @@
+.bg-earth{
+    background-image: url('../images/space/earth.png') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+.iq-bg-dark{
+    background: #06070c !important;
+}
+section{
+    background-color: transparent;
+}
+.space_planet_img{
+    bottom: 0;
+}

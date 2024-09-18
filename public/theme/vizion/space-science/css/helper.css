@@ -1,0 +1,50 @@
+.bg-primary{
+    background-color:  #333333 !important;
+}
+.iq-bg-primary{
+    /* background-color:  #97635333 !important; */
+    background-color: #eed7d033 !important;
+}
+.iq-ptb-90{
+    padding: 90px 0;
+}
+
+.iq-bg-primary{
+    background-color: #c8e1ff
+}
+
+.iq-bg-primary{
+    background-color:  #c8e1ff;
+}
+.iq-ptb-90{
+    padding: 90px 0;
+}
+
+.iq-ptb-50{
+    padding: 50px 0;
+}
+
+.iq-pb-30{
+    padding-bottom: 30px;
+}
+.iq-pb-50{
+    padding-bottom: 30px;
+}
+.iq-pt-100{
+    padding-top: 100px;
+}
+.iq-pb-90{
+    padding-bottom: 90px;
+}
+.iq-plr-15{
+    padding: 0 15px;
+}
+
+
+.bg-gradient-image{
+    background-image: url('../images/backtes.tpng_-1.png') !important; background-repeat: no-repeat
+}
+
+.contact-block .contact-child{
+    background: linear-gradient(to bottom, rgba(151,99,83,1) 0%, rgba(151,99,83,1) 100%);
+}
