@@ -27,16 +27,16 @@
                 <li><a href="#">سازمان‌های دولتی</a></li>
                 <li><a href="#">بیمه</a></li>
                 <li><a href="#">حوزه انرژی</a></li>
-                <li><a href="#">حوزه تولید</a></li>
                 <li><a href="#">حوزه املاک و ساخت و ساز</a></li>
             </ul>
         </li>
         <li class="has-dropdown">
             <a href="#">آموزش</a>
             <ul class="submenu">
-                <li><a href="{{ route("faq") }}">سوالات متداول</a></li>
                 <li><a href="#">وبلاگ</a></li>
                 <li><a href="#">مستندات API</a></li>
+                <li><a href="{{ route("faq") }}">سوالات متداول</a></li>
+                <li><a href="#">اصطلاحات</a></li>
             </ul>
         </li>
         <li class="has-dropdown">
@@ -46,15 +46,19 @@
                 <li><a href="{{ route("about") }}">[ نام برند ] چیست</a></li>
                 <li><a href="{{ route("contact.index") }}">تماس با ما</a></li>
                 <li><a href="{{ route("home") }}">فروشگاه</a></li>
+                <li><a href="#">مجوزها و دستاوردها</a></li>
+                <li><a href="#">فرصت‌های شغلی</a></li>
+                <li><a href="#">شرکای تجاری</a></li>
+            </ul>
+        </li>
+        <li class="has-dropdown">
+            <a href="#">صفحات دیگر</a>
+            <ul class="submenu">
                 <li><a href="#">پروژه‌ها</a></li>
                 <li><a href="#">تعرفه‌ها</a></li>
                 <li><a href="#">سرمایه‌گذاران</a></li>
-                <li><a href="#">مجوزها و دستاوردها</a></li>
-                <li><a href="#">فرصت‌های شغلی</a></li>
                 <li><a href="#">دانلود</a></li>
                 <li><a href="#">رویدادها</a></li>
-                <li><a href="#">شرکای تجاری</a></li>
-                <li><a href="#">اصطلاحات</a></li>
             </ul>
         </li>
     </ul>

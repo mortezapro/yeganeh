@@ -24,6 +24,7 @@ Route::get('/about', [HomePageController::class,"about"])->name("about");
 Route::get('/contact', [ContactController::class,"index"])->name("contact.index");
 Route::post('/contact', [ContactController::class,"store"])->name("contact.store");
 Route::get('/faq', [HomePageController::class,"faq"])->name("faq");
+Route::get('/blog', [HomePageController::class,"blog"])->name("blog.index");
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
