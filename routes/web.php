@@ -25,16 +25,16 @@ Route::get('/contact', [ContactController::class,"index"])->name("contact.index"
 Route::post('/contact', [ContactController::class,"store"])->name("contact.store");
 Route::get('/faq', [HomePageController::class,"faq"])->name("faq");
 
-//Route::get('/dashboard', function () {
-//    return Inertia::render('Dashboard');
-//})->middleware(['auth', 'verified'])->name('dashboard');
-//
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('panel.dashboard');
+
 //Route::middleware('auth')->group(function () {
 //    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 //    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 //});
-Route::middleware('guest')->group(function () {
+Route::prefix("panel")->middleware('guest')->group(function () {
     Route::get('login', [PanelAuthenticationController::class, 'index'])->name('panel.login.index');
     Route::post('login', [PanelAuthenticationController::class, 'login'])->name("panel.login");
 });
