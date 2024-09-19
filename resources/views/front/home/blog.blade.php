@@ -29,7 +29,7 @@
                                 <a href="blog-single.html">آشنایی با مراحل تولید تولید نرم‌افزار</a>
                             </h3>
                             <div class="xc-postbox__read-more">
-                                <a href="blog-single.html" class="xc-more-btn">بیشتر <i
+                                <a href="blog-single.html" class="xc-more-btn">ادامه <i
                                         class="fa-light fa-arrow-left-long"></i></a>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                             </h3>
                             <div class="xc-postbox__read-more">
                                 <a href="blog-single.html" class="xc-more-btn">ادامه <i
-                                        class="fa-light fa-arrow-right-long"></i></a>
+                                        class="fa-light fa-arrow-left-long"></i></a>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                                 <img src="{{ asset("theme/xaito/assets/img/blog/blog-4.jpg") }}" alt="">
                             </a>
                             <div class="xc-postbox__cat">
-                                <a href="#">Writing</a>
+                                <a href="#">اداری</a>
                             </div>
                         </div>
                         <div class="xc-postbox__content">
@@ -86,7 +86,7 @@
                             </h3>
                             <div class="xc-postbox__read-more">
                                 <a href="blog-single.html" class="xc-more-btn">ادامه<i
-                                        class="fa-light fa-arrow-right-long"></i></a>
+                                        class="fa-light fa-arrow-left-long"></i></a>
                             </div>
                         </div>
                     </div>

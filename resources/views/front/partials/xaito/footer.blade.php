@@ -26,26 +26,31 @@
                 </div>
                 <div class="col-lg-3 col-6">
                     <div class="xc-footer__widget mb-30">
-                        <h3 class="xc-footer__widget-title">محصولات</h3>
+                        <h3 class="xc-footer__widget-title">محصولات و خدمات</h3>
                         <div class="xc-footer__widget-nav">
                             <ul>
-                                <li><a href="usecase.html">AI Copywritting</a></li>
-                                <li><a href="404-2.html">AI Chatbot</a></li>
-                                <li><a href="usecase.html">AI Research</a></li>
-                                <li><a href="usecase-details.html">AI Videography</a></li>
+                                <li><a href="#">مدیریت هوشمند اسناد</a></li>
+                                <li><a href="#">دستیار شخصی هوش مصنوعی</a></li>
+                                <li><a href="#">پردازش هوشمند اسناد IDP</a></li>
+                                <li><a href="#">استخراج دانش و بینش</a></li>
+                                <li><a href="#">تجمیع [برند] با نرم‌افزارهای سازمانی</a></li>
+                                <li><a href="#">اصلاح هوشمند قراردادها</a></li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-6">
                     <div class="xc-footer__widget mb-30">
-                        <h3 class="xc-footer__widget-title">خدمات</h3>
+                        <h3 class="xc-footer__widget-title">صفحات سایت</h3>
                         <div class="xc-footer__widget-nav">
                             <ul>
-                                <li><a href="contact.html">Help Center</a></li>
-                                <li><a href="about.html">Submit Feedback</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                                <li><a href="about.html">Request Quote</a></li>
+                                <li><a href="#">راهکارها</a></li>
+                                <li><a href="#">فروشگاه</a></li>
+                                <li><a href="#">وبلاگ</a></li>
+                                <li><a href="#">درباره ما</a></li>
+                                <li><a href="#">ارتباط با ما</a></li>
+                                <li><a href="#">سوالات متداول</a></li>
                             </ul>
                         </div>
                     </div>
@@ -55,10 +60,12 @@
                         <h3 class="xc-footer__widget-title">لینک‌های مفید</h3>
                         <div class="xc-footer__widget-nav">
                             <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="team.html">Our Team</a></li>
-                                <li><a href="contact.html">Career</a></li>
-                                <li><a href="contact.html">Community</a></li>
+                                <li><a href="contact.html">همکاران تجاری</a></li>
+                                <li><a href="contact.html">مستندات API</a></li>
+                                <li><a href="contact.html">فیلم‌های آموزشی</a></li>
+                                <li><a href="contact.html">تعرفه‌ها</a></li>
+                                <li><a href="contact.html">قوانین و مقررات</a></li>
+                                <li><a href="contact.html">اصطلاحات</a></li>
                             </ul>
                         </div>
                     </div>
