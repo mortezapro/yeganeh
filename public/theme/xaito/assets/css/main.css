@@ -7178,7 +7178,8 @@ body.xc-dark-mode .xc-enable-dark {
   color: #8ca9d3;
 }
 .xc-dark-mode .xc-header-one__header {
-  background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
+  /*background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;*/
+  background-color: transparent !important;
 }
 .xc-dark-mode .xc-header-transparen.xc-white .xc-header-one__main-wrapper {
   background-color: RGBA(17, 24, 43, var(--bs-bg-opacity, 1)) !important;
