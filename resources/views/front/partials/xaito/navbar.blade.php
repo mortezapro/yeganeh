@@ -54,7 +54,6 @@
                 <li><a href="{{ route("about") }}">[ نام برند ] چیست</a></li>
                 <li><a href="{{ route("contact.index") }}">تماس با ما</a></li>
                 <li><a href="#">پروژه‌ها</a></li>
-                <li><a href="#">راهکارها</a></li>
                 <li><a href="#">مجوزها و دستاوردها</a></li>
                 <li><a href="#">فرصت‌های شغلی</a></li>
                 <li><a href="#">شرکای تجاری</a></li>

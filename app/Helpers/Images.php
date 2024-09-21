@@ -71,7 +71,7 @@ class Images
     {
         $this->makeDirectoryIfExist($path);
         $img = $this->manager->read($request->file($inputName)->path());
-        $img->resize(110, 110, function ($const) {
+        $img->resize(200, 130, function ($const) {
             $const->aspectRatio();
         })->save($path.$fileName);
         return true;
@@ -80,7 +80,7 @@ class Images
     {
         $this->makeDirectoryIfExist($path);
         $img = $this->manager->read($request->file($inputName)->path());
-        $img->resize(300, 300, function ($const) {
+        $img->resize(500, 360, function ($const) {
             $const->aspectRatio();
         })->save($path.$fileName);
         return true;
@@ -89,7 +89,7 @@ class Images
     {
         $this->makeDirectoryIfExist($path);
         $img = $this->manager->read($request->file($inputName)->path());
-        $img->resize(500, 500, function ($const) {
+        $img->resize(910, 600, function ($const) {
             $const->aspectRatio();
         })->save($path.$fileName);
         // with watermark:

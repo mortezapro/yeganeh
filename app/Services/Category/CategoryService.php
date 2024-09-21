@@ -35,4 +35,9 @@ class CategoryService extends BaseService implements CategoryServiceInterface{
             $image->deleteFile(config("upload_image_path.seo-image"),$category->seo_image);
         }
     }
+
+    public function getTopCategories()
+    {
+        return $this->model->withCount("posts")->orderBy("posts_count","desc")->limit(10)->get();
+    }
 }

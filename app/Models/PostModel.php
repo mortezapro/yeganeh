@@ -8,6 +8,7 @@ use App\Traits\Galleriable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Morilog\Jalali\Jalalian;
 
 class PostModel extends Model
 {
@@ -48,6 +49,11 @@ class PostModel extends Model
     public function setIsActiveAttribute($value)
     {
         $this->attributes['indexable'] = $value ? 1 : 0;
+    }
+
+    public function getPersianDateAttribute():string
+    {
+        return Jalalian::forge($this->attributes["created_at"])->ago();
     }
 
     public function getCaptionIndexableAttribute():string

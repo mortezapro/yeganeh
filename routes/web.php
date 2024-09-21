@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomePageController;
+use App\Http\Controllers\Front\PostController;
 use App\Http\Controllers\PanelAuthenticationController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -22,7 +23,7 @@ Route::get('/about', [HomePageController::class,"about"])->name("about");
 Route::get('/contact', [ContactController::class,"index"])->name("contact.index");
 Route::post('/contact', [ContactController::class,"store"])->name("contact.store");
 Route::get('/faq', [HomePageController::class,"faq"])->name("faq");
-Route::get('/blog', [HomePageController::class,"blog"])->name("blog.index");
+Route::get('/blog/{category:slug?}', [PostController::class,"index"])->name("front.blog.index");
 
 //Route::middleware('auth')->group(function () {
 //    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

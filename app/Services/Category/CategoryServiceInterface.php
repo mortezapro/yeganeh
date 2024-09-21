@@ -4,4 +4,5 @@ use App\Services\Base\BaseServiceInterface;
 
 interface CategoryServiceInterface extends BaseServiceInterface{
     public function syncCategory($category,array $categoryIds);
+    public function getTopCategories();
 }

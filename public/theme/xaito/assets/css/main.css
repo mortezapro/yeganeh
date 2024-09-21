@@ -1244,7 +1244,7 @@ header .xc-header-sticky .light-icon,header{
   transition: 0.3s;
 }
 .xc-more-btn i {
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .xc-more-btn:hover {
   color: var(--xc-theme-secondary);
@@ -3401,9 +3401,9 @@ header .xc-header-sticky .light-icon,header{
   display: none;
 }
 .xc-postbox__title {
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 20px;
-  line-height: 0.9cm;
+  line-height: 1.1cm;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .xc-postbox__title {
@@ -3434,7 +3434,7 @@ header .xc-header-sticky .light-icon,header{
 .xc-postbox__cat {
   position: absolute;
   top: 30px;
-  left: 30px;
+  right: 30px;
   z-index: 1;
 }
 .xc-postbox__cat a {
@@ -3891,7 +3891,7 @@ blockquote cite::before {
   height: 80px;
   border-radius: 5px;
   object-fit: cover;
-  margin-right: 15px;
+  margin-left: 15px;
 }
 .rc__post-title {
   margin-bottom: 6px;
@@ -3952,7 +3952,7 @@ blockquote cite::before {
 }
 .xc-sidebar__widget ul li {
   list-style: none;
-  padding-left: 19px;
+  padding-right: 19px;
   margin-bottom: 25px;
   line-height: 1;
 }
@@ -3963,13 +3963,13 @@ blockquote cite::before {
   font-size: 16px;
   color: var(--xc-text-1);
   position: relative;
-  padding-left: 5px;
+  padding-right: 5px;
   transition: 0.3s;
 }
 .xc-sidebar__widget ul li a::after {
   position: absolute;
-  content: "\f101";
-  left: -19px;
+  content: "\f100";
+  right: -19px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -4002,11 +4002,9 @@ blockquote cite::before {
   background: #F2F4F8;
   border: 0;
   color: #111111;
-  padding: 0 25px;
   text-transform: capitalize;
   outline: none;
-  padding-top: 3px;
-  padding-right: 70px;
+  padding-right: 50px;
 }
 .xc-sidebar__search button {
   position: absolute;
@@ -4099,7 +4097,7 @@ blockquote cite::before {
 .xc-footer__widget-social a:hover {
   color: var(--xc-theme-black);
 }
-.xc-footer__widget-social a + a {
+.xc-footer__widget-social a{
   margin-left: 8px;
 }
 
@@ -7509,3 +7507,14 @@ select,select option {
     transition: 0.3s;
 }
 */
+.pagination ul li{
+    margin-left: 5px;
+}
+.pagination ul li a{
+    color: var(--xc-theme-primary)
+}
+.pagination .active>.page-link, .pagination .page-link.active{
+    background: var(--xc-theme-primary) ;
+    color:#fcfcfc;
+    border-color:var(--xc-theme-primary);
+}

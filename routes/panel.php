@@ -24,5 +24,5 @@ Route::prefix("panel")->as("panel.")->middleware(['auth'])->group(function () {
     Route::post('/categories/update/{category:slug}', [CategoryController::class,"update"])->name("categories.update");
     Route::get('/categories/{category:slug}/edit', [CategoryController::class,"edit"])->name("categories.edit");
     Route::get('/categories/{category:slug}/destroy', [CategoryController::class,"destroy"])->name("categories.destroy");
-    
+
 });
