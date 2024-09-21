@@ -38,7 +38,7 @@
 
 <body class="authentication-bg authentication-bg-pattern">
 
-<div class="account-pages mt-5 mb-5">
+<div class="account-pages vh-100 d-flex align-items-center justify-content-center">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6 col-xl-4">
@@ -60,18 +60,28 @@
                                 </a>
                             </div>
                             <p class="text-muted mb-4 mt-3">ورود به پنل مدیریت.</p>
+
+                            @session("error")
+                                <p class="text-warning">نام کاربری یا رمز عبور اشتباه است</p>
+                            @endsession
                         </div>
                         <form action="{{ route("panel.login") }}" method="post">
                             @csrf
                             <div class="mb-3">
-                                <label for="emailaddress" class="form-label">ایمیل</label>
-                                <input class="form-control" type="email" name="email" id="email" required="" placeholder="ایمیل">
+                                @error("email")
+                                <p class="text-warning">ایمیل وارد شده اشتباه است</p>
+                                @enderror
+                                <label for="email" class="form-label">ایمیل</label>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="ایمیل" required>
                             </div>
 
                             <div class="mb-3">
+                                @error("password")
+                                    <p class="text-warning">وارد کردن رمز عبور الزامی است</p>
+                                @enderror
                                 <label for="password" class="form-label">رمز عبور</label>
                                 <div class="input-group input-group-merge">
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="رمز عبور">
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="رمز عبور" required>
                                     <div class="input-group-text" data-password="false">
                                         <span class="password-eye"></span>
                                     </div>
@@ -84,11 +94,9 @@
                                     <label class="form-check-label" for="checkbox-signin">مرا به خاطر بسپار</label>
                                 </div>
                             </div>
-
                             <div class="text-center d-grid">
                                 <button class="btn btn-primary" type="submit"> ورود</button>
                             </div>
-
                         </form>
 
                         <div class="text-center">
@@ -110,14 +118,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
+                {{--<div class="row mt-3">
                     <div class="col-12 text-center">
                         <p><a href="auth-recoverpw.html" class="text-white-50 ms-1">فراموشی رمز عبور</a></p>
                         <p class="text-white-50">اکانت کاربری ندارید?
                             <a href="auth-register.html"class="text-white ms-1"><b>عضویت</b></a>
                         </p>
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>

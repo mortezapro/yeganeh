@@ -6,7 +6,7 @@
                     <div class="xc-footer__widget mb-30">
                         <div class="xc-footer__widget-about">
                             <div class="xc-footer__widget-logo xc-disabled-dark">
-                                <a href="index.html"><img src="{{ asset("theme/xaito/assets/img/logo/black-logo.png") }}"
+                                <a href="{{ route("home") }}"><img src="{{ asset("theme/xaito/assets/img/logo/black-logo.png") }}"
                                                           alt=""></a>
                             </div>
                             <div class="xc-footer__widget-logo xc-enable-dark">

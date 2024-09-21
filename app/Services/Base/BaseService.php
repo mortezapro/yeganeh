@@ -17,20 +17,26 @@ abstract class BaseService implements BaseServiceInterface {
         return $this->model->select($fields)->where($condition)->first();
     }
 
-    public function store(array $data)
+    public function store(array $data, array $condition = [])
     {
+        if($condition){
+            return $this->model->where($condition)->update($data);
+        }
         return $this->model->create($data);
     }
 
     public function update(array $data, array $condition = [])
     {
-        return $this->where($condition)->update($data);
+        return $this->model->where($condition)->update($data);
     }
 
     public function destroy(array $condition = [] )
     {
-        return $this->where($condition)->delete();
+        return $this->model->where($condition)->delete();
     }
 
-
+    public function all()
+    {
+        return $this->model->orderBy("id","desc")->get();
+    }
 }

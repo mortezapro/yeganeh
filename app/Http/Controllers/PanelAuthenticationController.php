@@ -32,20 +32,15 @@ class PanelAuthenticationController extends Controller
         if(Auth::attempt($credentials))
         {
             $user = Auth::user();
-            if ($user->hasRole('admin')) {
+            if ($user->hasRole('super-admin')) {
                 $request->session()->regenerate();
                 return redirect()->route('panel.dashboard')->with('success', true);
             } else {
                 // Handle the case where the user is not an admin
                 Auth::logout();
-                return redirect()->route('login')->with('error', 'You do not have permission to access the admin panel.');
+                return abort(503);
             }
-
-
-
-            $request->session()->regenerate();
-            return redirect()->route('panel.dashboard')->with('success',true);
         }
-        return redirect()->route("login")->with("credential-error",true);
+        return redirect()->route("panel.login")->with("error",true);
     }
 }

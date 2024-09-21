@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
-use App\Services\Blog\BlogService;
-use App\Services\Blog\BlogServiceInterface;
+use App\Services\Post\PostService;
+use App\Services\Post\PostServiceInterface;
+use App\Services\Category\CategoryService;
+use App\Services\Category\CategoryServiceInterface;
 use App\Services\Contact\ContactService;
 use App\Services\Contact\ContactServiceInterface;
 use App\Services\User\UserService;
@@ -27,6 +29,7 @@ class CustomServiceProvider extends ServiceProvider
     {
         $this->app->bind(ContactServiceInterface::class,ContactService::class);
         $this->app->bind(UserServiceInterface::class,UserService::class);
-        $this->app->bind(BlogServiceInterface::class,BlogService::class);
+        $this->app->bind(PostServiceInterface::class,PostService::class);
+        $this->app->bind(CategoryServiceInterface::class,CategoryService::class);
     }
 }

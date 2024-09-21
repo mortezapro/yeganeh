@@ -16726,7 +16726,7 @@ body[data-layout-color="dark"] .datepicker tfoot tr th:hover {
     min-height: 400px;
 }
 .gallery-preview{padding:1rem;margin-bottom:2rem;border-radius:5px;border:1px solid #0a966c}
-.gallery-preview-item{width:250px;height: 100%;object-fit:cover;margin-right:1rem;border-radius:5px;display: inline-flex;justify-content: center}
+.gallery-preview img{width: 100%;height: auto}
 .file-preview{display:flex;justify-content:center!important;flex-direction:row-reverse!important;}
 table th{text-align: center!important;}
 tbody tr { border-color: #eee;}

@@ -5,10 +5,10 @@
                 <div class="xc-header-one__main-wrapper">
                     <div class="xc-header-one__left">
                         <div class="xc-header-one__logo xc-disabled-dark">
-                            <a href="index.html"><img src="{{ asset("theme/xaito/assets/img/logo/white-logo.png") }}" alt="logo"></a>
+                            <a href="{{ route("home") }}"><img src="{{ asset("theme/xaito/assets/img/logo/white-logo.png") }}" alt="logo"></a>
                         </div>
                         <div class="xc-header-one__logo xc-enable-dark">
-                            <a href="index.html"><img src="{{ asset("theme/xaito/assets/img/logo/white-logo.png") }}" alt="logo"></a>
+                            <a href="{{ route("home") }}"><img src="{{ asset("theme/xaito/assets/img/logo/white-logo.png") }}" alt="logo"></a>
                         </div>
                     </div>
                     <div class="xc-header-one__right">
