@@ -594,20 +594,18 @@
                             </div>
                             <div class="xc-feature-three__content">
                                 <h3 class="xc-feature-three__title">پشتیبانی از 121 زبان زنده در دنیا </h3>
-                                <p>ابزارهای OCR و هوش مصنوعی ما قادر استخراج و درک اطلاعات به 121 زبان دنیا را دارد</p>
+                                <p>ابزارهای OCR و هوش مصنوعی ما قادر به استخراج و درک اطلاعات به 121 زبان دنیا است و نیاز تمام کسب‌وکارها را رفع می‌کند</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="xc-feature-three__item wow xcfadeUp" data-wow-delay="200ms">
                             <div class="xc-feature-three__icon color-2">
-                                <span><i class="fa-sharp fa-solid fa-comments"></i></span>
+                                <span><i class="fa-sharp fa-solid fa-speed"></i></span>
                             </div>
                             <div class="xc-feature-three__content">
                                 <h3 class="xc-feature-three__title">پایداری و امنیت بالا</h3>
-                                <p>MasAI is now better at following along a <br> storyline and referencing
-                                    information
-                                    you or <br> Jasper have said recently in the chat.</p>
+                                <p>سرویس‌های ما با توجه به زیرساخت قوی و استفاده از سیستم های مدیریت ترافیک عملکرد پایدار و کارایی بالایی دارد.</p>
                             </div>
                         </div>
                     </div>
@@ -629,9 +627,8 @@
                             </div>
                             <div class="xc-feature-three__content">
                                 <h3 class="xc-feature-three__title">پشتیبانی تمام وقت</h3>
-                                <p>MasAI understands 29 languages so you can <br> chat inyour native tongue,
-                                    then watch
-                                    the AI <br> respond back to you in your language.</p>
+                                <p>ما به صورت شبانه‌روزی آماده خدمت‌رسانی به شما هستیم.
+                                    تیم پشتیبانی ما همیشه پاسخگوی نیازهای شماست.</p>
                             </div>
                         </div>
                     </div>
