@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->string("thumbnail")->default("thumbnail.png");
             $table->string("description");
             $table->longText("content");
+            $table->integer("type")->default(config("post-type.article"))->comment("1010:article ,1011:news , 1012:event , 1013:video , 1014:solution , 1015:download");
             $table->bigInteger("user_id")->unsigned();
             $table->integer('status')->default(config("post-status.published"))->comment("1010:draft , 1020: published");
             $table->timestamps();

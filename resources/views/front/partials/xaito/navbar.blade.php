@@ -4,6 +4,7 @@
         <li class="has-dropdown">
             <a href="#">خدمات</a>
             <ul class="submenu">
+                <li><a href="#">اسکن اسناد</a></li>
                 <li><a href="#">دیجیتالی کردن سازمان</a></li>
                 <li><a href="#">راهکارهای مبتنی بر AI</a></li>
                 <li><a href="#">تبدیل تصویر به متن (OCR)</a></li>
@@ -39,7 +40,7 @@
         <li class="has-dropdown">
             <a href="#">آموزش</a>
             <ul class="submenu">
-                <li><a href="#">وبلاگ</a></li>
+                <li><a href="{{ route("front.blog.index") }}">وبلاگ</a></li>
                 <li><a href="#">دانلود</a></li>
                 <li><a href="#">رویدادها</a></li>
                 <li><a href="#">مستندات API</a></li>

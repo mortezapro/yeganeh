@@ -36,56 +36,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-xxl-4 col-lg-4">
-                    <div class="xc-sidebar__wrapper mb-3">
-                        <div class="xc-sidebar__widget">
-                            <h3 class="xc-sidebar__widget-title">مطالب سایت</h3>
-                            <div class="xc-sidebar__widget-content">
-                                <ul class="pl-0 mb-0">
-
-                                    <li><a href="#">بلاگ</a></li>
-                                    <li><a href="#">اخبار</a></li>
-                                    <li><a href="#">رویدادها</a></li>
-                                    <li><a href="#">فیلم‌ها</a></li>
-                                    <li><a href="#">راهکارها</a></li>
-                                    <li><a href="#">دانلود نرم‌افزار</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="xc-sidebar__wrapper">
-                        <div class="xc-sidebar__widget">
-                            <div class="xc-sidebar__widget-content">
-                                <div class="xc-sidebar__search">
-                                    <form action="#">
-                                        <div class="xc-sidebar__search-input">
-                                            <input type="text" placeholder="تایپ کنید...">
-                                            <button type="submit">
-                                                <i class="fa-light fa-magnifying-glass"></i>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="xc-sidebar__widget">
-                            <h3 class="xc-sidebar__widget-title">دسته‌بندی‌های محبوب</h3>
-                            <div class="xc-sidebar__widget-content">
-                                <ul class="pl-0 mb-0">
-                                    @foreach($topCategories as $item)
-                                        <li><a href="{{ route("front.blog.index",["category" => $item->slug]) }}">{{ $item->title." (".$item->posts_count.")" }}</a></li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @include("front.post.sidebar")
                 </div>
                 <div class="col-xxl-8 col-lg-8">
                     <div class="xc-postbox__wrapper mb-50">
-                        @foreach($posts as $post)
+                        @forelse($posts as $post)
                         <article class="xc-postbox__item mb-50">
                             <div class="xc-postbox__thumb w-img mb-20 p-relative">
-                                <a href="#">
+                                <a href="{{ route("front.post.single",["post" => $post->slug]) }}">
                                     <img src="{{ asset("post-thumbnails/lg")."/".$post->thumbnail }}" alt="">
                                 </a>
                                 <div class="xc-postbox__cat">
@@ -105,21 +63,22 @@
                                     </span>--}}
                                 </div>
                                 <h3 class="xc-postbox__title">
-                                    <a href="#">{{ $post->title }}</a>
+                                    <a href="{{ route("front.post.single",["post" => $post->slug]) }}">{{ $post->title }}</a>
                                 </h3>
                                 <div class="xc-postbox__read-more">
-                                    <a href="#" class="xc-more-btn">ادامه<i
+                                    <a href="{{ route("front.post.single",["post" => $post->slug]) }}" class="xc-more-btn">ادامه<i
                                             class="fa-light fa-arrow-left-long"></i></a>
                                 </div>
                             </div>
                         </article>
-                        @endforeach
+                        @empty
+                            <h6 class="text-center">نتیجه‌ای برای این پرس‌وجو یافت نشد!</h6>
+                        @endforelse
                         <div class="pagination">
                             {{ $posts->links() }}
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>

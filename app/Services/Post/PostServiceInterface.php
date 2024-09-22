@@ -4,5 +4,5 @@ use App\Models\CategoryModel;
 use App\Services\Base\BaseServiceInterface;
 
 interface PostServiceInterface extends BaseServiceInterface{
-    public function getForBlog(int $perPage,CategoryModel $category = null);
+    public function getForBlog(int $perPage,string $search=null,CategoryModel $category = null);
 }

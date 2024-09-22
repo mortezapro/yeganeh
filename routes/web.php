@@ -4,6 +4,7 @@ use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomePageController;
 use App\Http\Controllers\Front\PostController;
 use App\Http\Controllers\PanelAuthenticationController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -23,7 +24,10 @@ Route::get('/about', [HomePageController::class,"about"])->name("about");
 Route::get('/contact', [ContactController::class,"index"])->name("contact.index");
 Route::post('/contact', [ContactController::class,"store"])->name("contact.store");
 Route::get('/faq', [HomePageController::class,"faq"])->name("faq");
-Route::get('/blog/{category:slug?}', [PostController::class,"index"])->name("front.blog.index");
+Route::get('/blog/{type?}', [PostController::class,"blog"])->name("front.blog.index");
+Route::get('/category/{category:slug?}', [PostController::class,"category"])->name("front.category.index");
+Route::get('/post/{post:slug?}', [PostController::class,"single"])->name("front.post.single");
+Route::get('/service/{service}', [ServiceController::class,"single"])->name("front.service.single");
 
 //Route::middleware('auth')->group(function () {
 //    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

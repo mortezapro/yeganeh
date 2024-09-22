@@ -76,4 +76,43 @@ class PostModel extends Model
         }
     }
 
+    public function scopePublished($query)
+    {
+        return $query->where('status', config("post-status.published"));
+    }
+
+    public function scopeDraft($query)
+    {
+        return $query->where('status', config("post-status.draft"));
+    }
+
+    public function scopeArticle($query)
+    {
+        return $query->where('type', config("post-type.article"));
+    }
+
+    public function scopeNews($query)
+    {
+        return $query->where('type', config("post-type.news"));
+    }
+
+    public function scopeEvent($query)
+    {
+        return $query->where('type', config("post-type.event"));
+    }
+
+    public function scopeVideo($query)
+    {
+        return $query->where('type', config("post-type.video"));
+    }
+
+    public function scopeSolution($query)
+    {
+        return $query->where('type', config("post-type.solution"));
+    }
+
+    public function scopeDownload($query)
+    {
+        return $query->where('type', config("post-type.download"));
+    }
 }
