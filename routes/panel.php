@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\CkeditorController;
 use App\Http\Controllers\Panel\CategoryController;
+use App\Http\Controllers\Panel\ContactController;
 use App\Http\Controllers\Panel\Dashboard\DashboardController;
 use App\Http\Controllers\Panel\PostController;
+use App\Http\Controllers\Panel\ScanMessageController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix("panel")->as("panel.")->middleware(['auth'])->group(function () {
@@ -24,5 +26,16 @@ Route::prefix("panel")->as("panel.")->middleware(['auth'])->group(function () {
     Route::post('/categories/update/{category:slug}', [CategoryController::class,"update"])->name("categories.update");
     Route::get('/categories/{category:slug}/edit', [CategoryController::class,"edit"])->name("categories.edit");
     Route::get('/categories/{category:slug}/destroy', [CategoryController::class,"destroy"])->name("categories.destroy");
+
+    Route::get('/scan-messages', [ScanMessageController::class,"index"])->name("scanMessages.index");
+    Route::get('/scan-messages/{scanMessage:tracking_code}/edit', [ScanMessageController::class,"edit"])->name("scanMessages.edit");
+    Route::post('/scan-messages/update/{scanMessage:id}', [ScanMessageController::class,"update"])->name("scanMessages.update");
+    Route::get('/scan-messages/{scanMessage:id}/destroy', [ScanMessageController::class,"destroy"])->name("scanMessages.destroy");
+    Route::get('/scan-messages/change-status/{scanMessage:id}', [ScanMessageController::class,"changeStatus"])->name("scanMessage.changeStatus");
+    Route::post('/scan-messages/set-comment/{scanMessage:id}', [ScanMessageController::class,"setComment"])->name("scanMessage.set-comment");
+
+    Route::get('/contacts', [ContactController::class,"index"])->name("contacts.index");
+    Route::get('/contacts/edit/{message:id}', [ContactController::class,"edit"])->name("contacts.edit");
+    Route::get('/contacts/{message:id}/destroy', [ContactController::class,"destroy"])->name("contacts.destroy");
 
 });

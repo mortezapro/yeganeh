@@ -17,9 +17,8 @@
                     </div>
                     <div class="page-title-left">
                         <h4 class="page-title d-inline me-2">افزودن پست جدید</h4>
-                        <a href="#" class="btn btn-primary"><i class="fe-list"></i> لیست پست‌ها</a>
+                        <a href="{{ route("panel.posts.index") }}" class="btn btn-primary"><i class="fe-list"></i> لیست پست‌ها</a>
                     </div>
-
                 </div>
             </div>
         </div>

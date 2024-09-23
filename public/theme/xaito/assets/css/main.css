@@ -7514,7 +7514,17 @@ select,select option {
     color: var(--xc-theme-primary)
 }
 .pagination .active>.page-link, .pagination .page-link.active{
-    background: var(--xc-theme-primary) ;
+    background: var(--xc-theme-primary);
     color:#fcfcfc;
     border-color:var(--xc-theme-primary);
+}
+button[disabled]{
+    background: grey;
+    cursor: no-drop;
+}
+#validation-result{
+    margin-top: 10px;
+}
+#validation-result li{
+    list-style: none;
 }

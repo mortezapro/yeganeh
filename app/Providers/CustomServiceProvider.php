@@ -8,6 +8,8 @@ use App\Services\Category\CategoryService;
 use App\Services\Category\CategoryServiceInterface;
 use App\Services\Contact\ContactService;
 use App\Services\Contact\ContactServiceInterface;
+use App\Services\ScanMessage\ScanMessageService;
+use App\Services\ScanMessage\ScanMessageServiceInterface;
 use App\Services\User\UserService;
 use App\Services\User\UserServiceInterface;
 use Illuminate\Support\ServiceProvider;
@@ -30,6 +32,6 @@ class CustomServiceProvider extends ServiceProvider
         $this->app->bind(ContactServiceInterface::class,ContactService::class);
         $this->app->bind(UserServiceInterface::class,UserService::class);
         $this->app->bind(PostServiceInterface::class,PostService::class);
-        $this->app->bind(CategoryServiceInterface::class,CategoryService::class);
+        $this->app->bind(ScanMessageServiceInterface::class,ScanMessageService::class);
     }
 }

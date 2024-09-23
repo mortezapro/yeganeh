@@ -3,6 +3,7 @@
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomePageController;
 use App\Http\Controllers\Front\PostController;
+use App\Http\Controllers\Front\ScanMessageController;
 use App\Http\Controllers\PanelAuthenticationController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +29,7 @@ Route::get('/blog/{type?}', [PostController::class,"blog"])->name("front.blog.in
 Route::get('/category/{category:slug?}', [PostController::class,"category"])->name("front.category.index");
 Route::get('/post/{post:slug?}', [PostController::class,"single"])->name("front.post.single");
 Route::get('/service/{service}', [ServiceController::class,"single"])->name("front.service.single");
+Route::post('/scan-messages', [ScanMessageController::class,"store"])->name("front.scanMessage.store");
 
 //Route::middleware('auth')->group(function () {
 //    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

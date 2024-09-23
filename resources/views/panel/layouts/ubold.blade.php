@@ -68,6 +68,9 @@
         table.dataTable thead th, table.dataTable thead td{
             border: none;
         }
+        .line-h-1{
+            line-height: 0.8cm;
+        }
     </style>
 </head>
 

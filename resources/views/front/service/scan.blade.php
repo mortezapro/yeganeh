@@ -2,6 +2,7 @@
 @section("head")
     <title>اسکن اسناد | {{ env("APP_NAME") }}</title>
     <meta name="description" content="توضیحات اسکن اسناد">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 
 @section("content")
@@ -534,8 +535,8 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="xc-contact-page__form">
-                        <form class="contact-form-validated" action="http://localhost:8000/contact" method="POST" novalidate="novalidate">
-                            <input type="hidden" name="_token" value="28PBSpv2c6fshTe1KST02y9yvJjuFMcBuyKzEkQE" autocomplete="off">
+                        <form id="service-form" action="{{ route("front.scanMessage.store") }}" method="POST" novalidate="novalidate">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="xc-contact-page__input-box">
@@ -549,27 +550,17 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="xc-contact-page__input-box">
-                                        <select id="subject" name="subject" required="" aria-required="true">
-                                            <option value="1">درخواست همکاری</option>
-                                            <option value="2">انتقادات و پیشنهادات</option>
-                                            <option value="3">گزارش باگ</option>
-                                            <option value="4">دیگر</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="xc-contact-page__input-box">
-                                        <textarea cols="30" rows="10" id="message" name="message" placeholder="متن پیام..." required="" aria-required="true"></textarea>
+                                        <textarea cols="30" rows="10" id="content" name="content" placeholder="متن پیام..." required="" aria-required="true"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="xc-contact-page__submit">
-                                        <button type="submit" class="xc-btn">ثبت درخواست </button>
+                                        <button id="btn-submit" type="submit" class="xc-btn">ثبت درخواست<i style="display: none" class="fa fa-spin fa-spinner me-2" id="btn-loading"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </form>
-                        <div class="result"></div>
+                        <ul id="validation-result"></ul>
                     </div>
                 </div>
             </div>
@@ -737,4 +728,42 @@
 @endsection
 
 @section("scripts")
+    <script>
+        $(document).ready(function (){
+            $("#service-form").on("submit",function (e){
+                e.preventDefault();
+                let data = {
+                    "_token": "{{ csrf_token() }}",
+                    "name": $("#name").val(),
+                    "email": $("#email").val(),
+                    "content": $("#content").val(),
+                };
+                $.ajax({
+                    type:'POST',
+                    url:"{{ route("front.scanMessage.store") }}",
+                    beforeSend: function() {
+                        $("#btn-loading").show("fast");
+                        $("#btn-submit").attr("disabled","disabled");
+                    },
+                    data: data,
+                    error:function(xhr) {
+                        console.log(xhr.status)
+                        $("#btn-loading").hide("fast");
+                        $("#btn-submit").removeAttr("disabled");
+                        if(xhr.status == 422){
+                            $.each(xhr.responseJSON.errors, function (key, item) {
+                                $("#validation-result").append("<li class='alert alert-danger'>"+item+"</li>")
+                            });
+                        }
+                    },
+                    success:function(data) {
+                        $("#btn-loading").hide("fast");
+                        $("#validation-result").html("<li class='alert alert-success'>درخواست شما با موفقیت ثبت شد. همکاران ما به زودی با شما ارتباط خواهند گرفت. کد پیگیری شما: "+data+"</li>")
+                        $("#service-form")[0].reset()
+                        $("#btn-submit").removeAttr("disabled");
+                    }
+                });
+            })
+        })
+    </script>
 @endsection
