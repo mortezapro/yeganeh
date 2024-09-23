@@ -142,6 +142,17 @@
                                         <label for="thumbnail">تصویر شاخص</label>
                                         <input id="thumbnail" type="file" class="file" name="thumbnail">
                                     </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="post_type" class="form-label">نوع پست</label>
+                                        <select name="type" id="post_type" class="form-control">
+                                            <option @if($post->type == config("post-type.article")) selected @endif value="{{ config("post-type.article") }}">پست</option>
+                                            <option @if($post->type == config("post-type.news")) selected @endif value="{{ config("post-type.news") }}">خبر</option>
+                                            <option @if($post->type == config("post-type.event")) selected @endif value="{{ config("post-type.event") }}">رویداد</option>
+                                            <option @if($post->type == config("post-type.video")) selected @endif value="{{ config("post-type.video") }}">ویدئو</option>
+                                            <option @if($post->type == config("post-type.download")) selected @endif value="{{ config("post-type.download") }}">دانلود</option>
+                                            <option @if($post->type == config("post-type.solution")) selected @endif value="{{ config("post-type.solution") }}">راهکار</option>
+                                        </select>
+                                    </div>
                                     <div class="mb-3">
                                         <label for="status" class="form-label d-block mb-3">وضعیت</label>
                                         <div class="btn-group">

@@ -17,7 +17,7 @@ class PostModel extends Model
     protected $table = "posts";
     protected $primaryKey='id';
     protected $fillable = [
-        "title","slug","description","seo_title","seo_description","seo_image","content","status","user_id","indexable","canonical","thumbnail"
+        "title","slug","description","seo_title","seo_description","seo_image","content","status","user_id","indexable","canonical","thumbnail","type"
     ];
 
     protected $casts = [

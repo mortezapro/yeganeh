@@ -128,7 +128,6 @@
                                             <li class="my-1">به هیچ عنوان از فاصله (space) در فیلد slug استفاده نکنید</li>
                                             <li class="my-1">سعی کنید فیلد slug را به انگلیسی وارد کنید</li>
                                             <li class="my-1">با توجه به اینکه صفحه بندی به صورت pagination می باشد، اگر لینک کنونیکال خالی باشد؛ کنونیکال به صفحه اصلی دسته بدون پارامتر ارجاع داده خواهد شد. </li>
-
                                         </ul>
                                     </div>
                                 </div>
@@ -141,6 +140,17 @@
                                     <div class="mb-3">
                                         <label for="thumbnail">تصویر شاخص</label>
                                         <input id="thumbnail" type="file" class="file" name="thumbnail">
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <label for="post_type" class="form-label">نوع پست</label>
+                                        <select name="type" id="post_type" class="form-control">
+                                            <option value="{{ config("post-type.article") }}">پست</option>
+                                            <option value="{{ config("post-type.news") }}">خبر</option>
+                                            <option value="{{ config("post-type.event") }}">رویداد</option>
+                                            <option value="{{ config("post-type.video") }}">ویدئو</option>
+                                            <option value="{{ config("post-type.download") }}">دانلود</option>
+                                            <option value="{{ config("post-type.solution") }}">راهکار</option>
+                                        </select>
                                     </div>
                                     <div class="mb-3">
                                         <label for="status" class="form-label d-block mb-3">وضعیت</label>
