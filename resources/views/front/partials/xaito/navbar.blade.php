@@ -4,7 +4,7 @@
         <li class="has-dropdown">
             <a href="#">خدمات</a>
             <ul class="submenu">
-                <li><a href="#">اسکن اسناد</a></li>
+                <li><a href="{{ route("front.service.single",["service" => "scan"]) }}">اسکن اسناد</a></li>
                 <li><a href="#">دیجیتالی کردن سازمان</a></li>
                 <li><a href="#">راهکارهای مبتنی بر AI</a></li>
                 <li><a href="#">تبدیل تصویر به متن (OCR)</a></li>
