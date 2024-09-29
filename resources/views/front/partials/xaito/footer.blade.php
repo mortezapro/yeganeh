@@ -19,8 +19,7 @@
                                 <a href="#"><span><i class="fab fa-linkedin-in"></i></span></a>
                                 <a href="#"><span><i class="fab fa-youtube"></i></span></a>
                             </div>
-                            <p class="xc-footer__widget-info">تهران، خیابان شریعتی، حد فاصل خیابان سمیه و سه راه طالقانی، کوچه مشایخی، پلاک 2، واحد 25
-                            </p>
+                            <p class="xc-footer__widget-info">{{ __("footer.address") }}</p>
                         </div>
                     </div>
                 </div>

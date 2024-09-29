@@ -1,23 +1,23 @@
 <nav id="mobile-menu">
     <ul class="ul-0">
-        <li><a href="{{ route("home") }}">فروشگاه</a></li>
+        <li><a href="{{ route("home") }}">{{ __("main-menu.store") }}</a></li>
         <li class="has-dropdown">
-            <a href="#">خدمات</a>
+            <a href="#">{{ __("main-menu.services") }}</a>
             <ul class="submenu">
-                <li><a href="{{ route("front.service.single",["service" => "scan"]) }}">اسکن اسناد</a></li>
-                <li><a href="#">دیجیتالی کردن سازمان</a></li>
-                <li><a href="#">راهکارهای مبتنی بر AI</a></li>
-                <li><a href="#">تبدیل تصویر به متن (OCR)</a></li>
-                <li><a href="#">پردازش هوشمند اسناد</a></li>
-                <li><a href="#">دستیار شخصی هوش مصنوعی</a></li>
+                <li><a href="{{ route("front.service.single",["service" => "scan"]) }}">{{ __("main-menu.scan") }}</a></li>
+                <li><a href="#">{{ __("main-menu.digitization") }}</a></li>
+                <li><a href="#">{{ __("main-menu.ai-solution") }}</a></li>
+                <li><a href="#">{{ __("main-menu.ocr") }}</a></li>
+                <li><a href="#">{{ __("main-menu.idp") }}</a></li>
+                <li><a href="#">{{ __("main-menu.ai-assistant") }}</a></li>
             </ul>
         </li>
         <li class="has-dropdown">
-            <a href="#">محصولات</a>
+            <a href="#">{{ __("main-menu.products") }}</a>
             <ul class="submenu">
-                <li><a href="#">مدیریت اسناد DMS</a></li>
-                <li><a href="#">مدیریت اسناد مهندسی EDMS</a></li>
-                <li><a href="#">مدیریت ارتباط با مشتریان CRM</a></li>
+                <li><a href="#">{{ __("main-menu.dms") }}</a></li>
+                <li><a href="#">{{ __("main-menu.edms") }}</a></li>
+                <li><a href="#">{{ __("main-menu.crm") }}</a></li>
             </ul>
         </li>
         {{--<li class="has-dropdown">
@@ -38,28 +38,28 @@
             </ul>
         </li>--}}
         <li class="has-dropdown">
-            <a href="#">آموزش</a>
+            <a href="#">{{ __("main-menu.tutorials") }}</a>
             <ul class="submenu">
-                <li><a href="{{ route("front.blog.index") }}">وبلاگ</a></li>
-                <li><a href="#">دانلود</a></li>
-                <li><a href="#">رویدادها</a></li>
-                <li><a href="#">مستندات API</a></li>
-                <li><a href="{{ route("faq") }}">سوالات متداول</a></li>
-                <li><a href="#">اصطلاحات</a></li>
+                <li><a href="{{ route("front.blog.index") }}">{{ __("main-menu.blogs") }}</a></li>
+                <li><a href="#">{{ __("main-menu.downloads") }}</a></li>
+                <li><a href="#">{{ __("main-menu.events") }}</a></li>
+                <li><a href="#">{{ __("main-menu.api-document") }}</a></li>
+                <li><a href="{{ route("faq") }}">{{ __("main-menu.faq") }}</a></li>
+                <li><a href="#">{{ __("main-menu.terms") }}</a></li>
             </ul>
         </li>
         <li class="has-dropdown">
-            <a href="#">منابع</a>
+            <a href="#">{{ __("main-menu.resources") }}</a>
             <ul class="submenu">
-                <li><a href="{{ route("about") }}">درباره ما</a></li>
-                <li><a href="{{ route("about") }}">[ نام برند ] چیست</a></li>
-                <li><a href="{{ route("contact.index") }}">تماس با ما</a></li>
-                <li><a href="#">پروژه‌ها</a></li>
-                <li><a href="#">مجوزها و دستاوردها</a></li>
-                <li><a href="#">فرصت‌های شغلی</a></li>
-                <li><a href="#">شرکای تجاری</a></li>
+                <li><a href="{{ route("about") }}">{{ __("main-menu.about") }}</a></li>
+                <li><a href="{{ route("about") }}">{{ __("main-menu.my-brand") }}</a></li>
+                <li><a href="{{ route("contact.index") }}">{{ __("main-menu.contact") }}</a></li>
+                <li><a href="#">{{ __("main-menu.projects") }}</a></li>
+                <li><a href="#">{{ __("main-menu.rewards") }}</a></li>
+                <li><a href="#">{{ __("main-menu.career") }}</a></li>
+                <li><a href="#">{{ __("main-menu.partners") }}</a></li>
             </ul>
         </li>
-        <li><a href="#">تعرفه‌ها</a></li>
+        <li><a href="#">{{ __("main-menu.pricing") }}</a></li>
     </ul>
 </nav>

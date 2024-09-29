@@ -5,16 +5,28 @@
 @endsection
 
 @section("content")
-    @include("front.home.space")
-    @include("front.home.services")
-    @include("front.home.about")
-    @include("front.home.solutions")
-    @include("front.home.brands")
-    @include("front.home.testimonials")
-    @include("front.home.pricing")
-    @include("front.home.faq")
-    @include("front.home.blog")
-    @include("front.home.cta")
+    @if(app()->getLocale() == "fa")
+        @include("front.home.fa.space")
+        @include("front.home.fa.services")
+        @include("front.home.fa.solutions")
+        @include("front.home.fa.brands")
+        @include("front.home.fa.testimonials")
+        @include("front.home.fa.pricing")
+        @include("front.home.fa.faq")
+        @include("front.home.fa.blog")
+        @include("front.home.fa.cta")
+    @else
+        @include("front.home.en.space")
+        @include("front.home.en.services")
+        @include("front.home.en.solutions")
+        @include("front.home.en.brands")
+        @include("front.home.en.testimonials")
+        @include("front.home.en.pricing")
+        @include("front.home.en.faq")
+        @include("front.home.en.blog")
+        @include("front.home.en.cta")
+    @endif
+
 @endsection
 
 @section("scripts")

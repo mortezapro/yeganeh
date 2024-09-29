@@ -19,17 +19,17 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [HomePageController::class,"index"])->name("home");
-Route::get('/home2', [HomePageController::class,"index2"])->name("home2");
-Route::get('/about', [HomePageController::class,"about"])->name("about");
-Route::get('/contact', [ContactController::class,"index"])->name("contact.index");
-Route::post('/contact', [ContactController::class,"store"])->name("contact.store");
-Route::get('/faq', [HomePageController::class,"faq"])->name("faq");
-Route::get('/blog/{type?}', [PostController::class,"blog"])->name("front.blog.index");
-Route::get('/category/{category:slug?}', [PostController::class,"category"])->name("front.category.index");
-Route::get('/post/{post:slug?}', [PostController::class,"single"])->name("front.post.single");
-Route::get('/service/{service}', [ServiceController::class,"single"])->name("front.service.single");
-Route::post('/scan-messages', [ScanMessageController::class,"store"])->name("front.scanMessage.store");
+Route::get('', [HomePageController::class,"index"])->name("home");
+Route::get('home2', [HomePageController::class,"index2"])->name("home2");
+Route::get('about', [HomePageController::class,"about"])->name("about");
+Route::get('contact', [ContactController::class,"index"])->name("contact.index");
+Route::post('contact', [ContactController::class,"store"])->name("contact.store");
+Route::get('faq', [HomePageController::class,"faq"])->name("faq");
+Route::get('blog/{type?}', [PostController::class,"blog"])->name("front.blog.index");
+Route::get('category/{category:slug?}', [PostController::class,"category"])->name("front.category.index");
+Route::get('post/{post:slug?}', [PostController::class,"single"])->name("front.post.single");
+Route::get('service/{service}', [ServiceController::class,"single"])->name("front.service.single");
+Route::post('scan-messages', [ScanMessageController::class,"store"])->name("front.scanMessage.store");
 
 //Route::middleware('auth')->group(function () {
 //    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

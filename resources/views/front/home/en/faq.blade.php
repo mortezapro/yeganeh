@@ -1,7 +1,7 @@
 <section class="xc-faq-two__section pb-90">
     <div class="container">
         <div class="xc-section__title-wrapper text-center mb-60 wow xcfadeUp">
-            <h3 class="xc-section__title wow">سوالات متداول</h3>
+            <h3 class="xc-section__title wow">{{ __("homepage.faq-title") }}</h3>
         </div>
         <div class="row">
             <div class="xc-accrodion-grp" data-grp-name="faq-two-xc-accrodion">

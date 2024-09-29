@@ -27,11 +27,11 @@
     @yield("head")
 </head>
 
-<body class="rtl">
+<body class="{{ app()->getLocale() == "fa" ? "rtl" : "ltr" }}">
 <!--[if lte IE 9]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-<div class="xc-page-wrapper rtl">
+<div class="xc-page-wrapper">
     @include("front.partials.xaito.header-dark")
     <div id="xc-cursor">
         <div class="xc-cursor__circle"></div>

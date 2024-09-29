@@ -334,7 +334,7 @@
             </div>
         </div>
     </div>
-    @include("front.home.cta")
+    @include("front.home.fa.cta")
 @endsection
 
 @section("scripts")

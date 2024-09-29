@@ -28,7 +28,7 @@
     @include("front.contact.details")
     @include("front.contact.form")
     @include("front.contact.map")
-    @include("front.home.cta")
+    @include("front.home.fa.cta")
 @endsection
 
 @section("scripts")

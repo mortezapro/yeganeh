@@ -4,7 +4,7 @@
             <h3 class="xc-brand-one__count xc-count-box">
                 <span class="xc-count-text" data-speed="1500" data-stop="70000"></span>+
             </h3>
-            <h4 class="xc-brand-one__title wow xcfadeUp">حرفه‌ای‌ها ما را انتخاب می‌کنند</h4>
+            <h4 class="xc-brand-one__title wow xcfadeUp">Professionals Choose Us</h4>
         </div>
         <div class="xc-brand-one__wrapper">
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 row-cols-xl-5 justify-content-center">

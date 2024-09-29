@@ -2,7 +2,7 @@
          data-background="{{ asset("theme/xaito/assets/img/backgroud/price-bg-1.png") }}">
     <div class="container">
         <div class="xc-section__title-wrapper text-center mb-55 wow xcfadeUp">
-            <h3 class="xc-section__title wow"><span>تعرفه‌های ما</span></h3>
+            <h3 class="xc-section__title wow"><span>{{ __("homepage.price-title") }}</span></h3>
         </div>
         <div class="xc-price-one__tab-nav">
             <nav class="xc-price-one__tab-wrapper xc-nav">
@@ -11,33 +11,30 @@
                     <label for="price-tab-check" class="nav justify-content-center">
                                         <span class="nav-link" id="nav-monthly-tab" data-bs-toggle="tab"
                                               data-bs-target="#nav-monthly" role="tab" aria-controls="nav-monthly"
-                                              aria-selected="true">ماهانه</span>
+                                              aria-selected="true">{{ __("homepage.monthly") }}</span>
                         <input type="checkbox" id="price-tab-check">
                         <i></i>
                         <span class="nav-link active" id="nav-yearly-tab" data-bs-toggle="tab"
                               data-bs-target="#nav-yearly" role="tab" aria-controls="nav-yearly"
-                              aria-selected="false">سالانه</span>
+                              aria-selected="false">{{ __("homepage.annual") }}</span>
                     </label>
                 </div>
                 <div class="xc-price-one__tab-offer">
                     <img src="{{ asset("theme/xaito/assets/img/shapes/price-arrow-1.png") }}" alt="">
-                    <span class="rtl">30% تخفیف</span>
+                    <span class="rtl">30% {{ __("homepage.off") }}</span>
                 </div>
             </nav>
         </div>
         <div class="row">
             <div class="col-xxl-12">
-                <div class="tab-content wow fadeInUp rtl text-right" id="nav-tabContent" data-wow-delay=".3s">
+                <div class="tab-content wow fadeInUp text-right" id="nav-tabContent" data-wow-delay=".3s">
                     <div class="tab-pane fade" id="nav-monthly" role="tabpanel"
                          aria-labelledby="nav-monthly-tab">
                         <div class="row">
                             <div class="col-lg-4">
                                 <div class="xc-price-one__item">
-                                    <div class="xc-price-one__banner">
-                                        <p>Most Popular</p>
-                                    </div>
                                     <div class="xc-price-one__head">
-                                        <h3 class="xc-price-one__package">پلن پایه</h3>
+                                        <h3 class="xc-price-one__package">{{ __("homepage.basic-plan") }}</h3>
                                         <p class="xc-price-one__price">700,000 تومان </p>
                                     </div>
                                     <div class="xc-price-one__list">
@@ -50,17 +47,17 @@
                                         <p><i class="fa-solid fa-check"></i> 29+ languages</p>
                                     </div>
                                     <div class="xc-price-one__btn">
-                                        <a href="contact.html">ادامه</a>
+                                        <a href="contact.html">{{ __("homepage.more-btn") }}</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="xc-price-one__item featured">
                                     <div class="xc-price-one__banner">
-                                        <p>محبوب‌ترین</p>
+                                        <p>{{ __("homepage.popular") }}</p>
                                     </div>
                                     <div class="xc-price-one__head">
-                                        <h3 class="xc-price-one__package">پلن حرفه‌ای</h3>
+                                        <h3 class="xc-price-one__package">{{ __("homepage.professional-plan") }}</h3>
                                         <p class="xc-price-one__price">2,200,000 تومان </p>
                                     </div>
                                     <div class="xc-price-one__list">
@@ -73,8 +70,8 @@
                                         <p><i class="fa-solid fa-check"></i> 29+ languages</p>
                                     </div>
                                     <div class="xc-price-one__btn">
-                                        <a class="mb-2" href="contact.html">3 روز تست رایگان</a>
-                                        <a href="contact.html">ادامه</a>
+                                        <a class="mb-2" href="contact.html">{{ __("homepage.pricing-free-btn") }}</a>
+                                        <a href="contact.html">{{ __("homepage.more-btn") }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -84,7 +81,7 @@
                                         <p>Most Popular</p>
                                     </div>
                                     <div class="xc-price-one__head">
-                                        <h3 class="xc-price-one__package">پلن تجاری</h3>
+                                        <h3 class="xc-price-one__package">{{ __("homepage.business-plan") }}</h3>
                                         <p class="xc-price-one__price">4,600,000 تومان </p>
                                     </div>
                                     <div class="xc-price-one__list">
@@ -97,7 +94,7 @@
                                         <p><i class="fa-solid fa-check"></i> 29+ languages</p>
                                     </div>
                                     <div class="xc-price-one__btn">
-                                        <a href="contact.html">ادامه</a>
+                                        <a href="contact.html">{{ __("homepage.more-btn") }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -112,7 +109,7 @@
                                         <p>Most Popular</p>
                                     </div>
                                     <div class="xc-price-one__head">
-                                        <h3 class="xc-price-one__package">پلن پایه</h3>
+                                        <h3 class="xc-price-one__package">{{ __("homepage.basic-plan") }}</h3>
                                         <p class="xc-price-one__price">700,000 تومان </p>
                                     </div>
                                     <div class="xc-price-one__list">
@@ -125,17 +122,17 @@
                                         <p><i class="fa-solid fa-check"></i> 29+ languages</p>
                                     </div>
                                     <div class="xc-price-one__btn">
-                                        <a href="contact.html">ادامه</a>
+                                        <a href="contact.html">{{ __("homepage.more-btn") }}</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="xc-price-one__item featured">
                                     <div class="xc-price-one__banner">
-                                        <p>محبوب‌ترین</p>
+                                        <p>{{ __("homepage.popular") }}</p>
                                     </div>
                                     <div class="xc-price-one__head">
-                                        <h3 class="xc-price-one__package">پلن حرفه‌ای</h3>
+                                        <h3 class="xc-price-one__package">{{ __("homepage.professional-plan") }}</h3>
                                         <p class="xc-price-one__price">2,200,000 تومان </p>
                                     </div>
                                     <div class="xc-price-one__list">
@@ -148,8 +145,8 @@
                                         <p><i class="fa-solid fa-check"></i> 29+ languages</p>
                                     </div>
                                     <div class="xc-price-one__btn">
-                                        <a class="mb-2" href="contact.html">3 روز تست رایگان</a>
-                                        <a href="contact.html">ادامه</a>
+                                        <a class="mb-2" href="contact.html">{{ __("homepage.pricing-free-btn") }}</a>
+                                        <a href="contact.html">{{ __("homepage.more-btn") }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -159,7 +156,7 @@
                                         <p>Most Popular</p>
                                     </div>
                                     <div class="xc-price-one__head">
-                                        <h3 class="xc-price-one__package">پلن تجاری</h3>
+                                        <h3 class="xc-price-one__package">{{ __("homepage.business-plan") }}</h3>
                                         <p class="xc-price-one__price">4,600,000 تومان </p>
                                     </div>
                                     <div class="xc-price-one__list">
@@ -172,7 +169,7 @@
                                         <p><i class="fa-solid fa-check"></i> 29+ languages</p>
                                     </div>
                                     <div class="xc-price-one__btn">
-                                        <a href="contact.html">ادامه</a>
+                                        <a href="contact.html">{{ __("homepage.more-btn") }}</a>
                                     </div>
                                 </div>
                             </div>

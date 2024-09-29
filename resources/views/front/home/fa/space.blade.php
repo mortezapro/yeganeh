@@ -18,7 +18,7 @@
             <div class="col-lg-2 col-md-12 col-xl-5 col-xxl-6  col-sm-none"></div>
             <div class="col-lg-10 col-md-12 col-xl-7 co-sm-12 col-xxl-6 intro-content">
                 <div class="xc-header-banner__title-wrapper wow xcfadeUp">
-                    <span class="xc-header-banner__tag text-white"> از کاغذ به داده، از داده به ارزش</span>
+                    <span class="xc-header-banner__tag text-white">{{ __("homepage.space-title1") }}</span>
                     {{--                                <span class="xc-header-banner__tag"> از تصمیم‌گیری‌های مبتنی بر حدس و گمان خداحافظی کنید.</span>--}}
                     {{--                                <span class="xc-header-banner__tag"> امنیت و حفاظت از اسنادتان، اولویت ماست</span>--}}
                     {{--                                <span class="xc-header-banner__tag"> با ما، آینده دیجیتال سازمانتان را تضمین کنید</span>--}}
@@ -28,17 +28,13 @@
                     {{--                                <span class="xc-header-banner__tag">  به دنیای دیجیتال قدم بگذارید</span>--}}
                     {{--                                <span class="xc-header-banner__tag">  سازمان بدون کاغذ، آینده‌ای روشن</span>--}}
                     <h2 class="xc-header-banner__title dynamic-title cd-headline clip is-full-width text-white">
-                        اسنادتان را به دارایی دیجیتال تبدیل کنید
+                        {{ __("homepage.space-title2") }}
                     </h2>
-                    <p class="xc-header-banner__info wow xcfadeUp text-white">با پلتفرم مبتنی بر ابر ما، به تمام ابزارها و خدماتی که برای مدیریت داده و تصمیم‌گیری مبتنی بر داده نیاز دارید، در یک محیط یکپارچه و مقیاس‌پذیر دسترسی خواهید داشت.</p>
+                    <p class="xc-header-banner__info wow xcfadeUp text-white">{{ __("homepage.space-description") }}</p>
                 </div>
                 <div class="xc-header-banner__btns">
-                    <a href="about.html" class="xc-border-btn wow xcfadeRight ms-2">
-                        می‌خواهم بیشتر بدانم
-                    </a>
-                    <a href="about.html" class="xc-btn wow xcfadeRight">
-                        شروع رایگان
-                    </a>
+                    <a href="about.html" class="xc-border-btn wow xcfadeRight ms-2">{{ __("homepage.space-btn") }}</a>
+                    <a href="about.html" class="xc-btn wow xcfadeRight">{{ __("homepage.space-cta-text") }}</a>
 
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<header class="rtl header-dark">
+<header class="header-dark">
     <div class="xc-header-one__header">
         <div class="xc-header-one__main" id="xc-header-sticky">
             <div class="container">
@@ -23,7 +23,7 @@
                                     <i class="sun fa-light fa-sun-bright dark-icon"></i>
                                 </button>
                                 <div class="xc-header-bnt-1">
-                                    <a href="#" class="xc-border-btn">شروع سریع و رایگان</a>
+                                    <a href="#" class="xc-border-btn">{{ __("main-menu.navbar-cta-text") }}</a>
                                 </div>
                             </div>
                             <div class="xc-header-one__hamburger mr-30 d-xl-none">
