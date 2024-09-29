@@ -5,6 +5,7 @@ use App\Http\Controllers\Panel\CategoryController;
 use App\Http\Controllers\Panel\ContactController;
 use App\Http\Controllers\Panel\Dashboard\DashboardController;
 use App\Http\Controllers\Panel\PostController;
+use App\Http\Controllers\Panel\ProjectController;
 use App\Http\Controllers\Panel\ScanMessageController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,13 @@ Route::prefix("panel")->as("panel.")->middleware(['auth'])->group(function () {
     Route::post('/posts/update/{post:slug}', [PostController::class,"update"])->name("posts.update");
     Route::get('/posts/{post:slug}/edit', [PostController::class,"edit"])->name("posts.edit");
     Route::get('/posts/{post:slug}/destroy', [PostController::class,"destroy"])->name("posts.destroy");
+
+    Route::get('/projects', [ProjectController::class,"index"])->name("projects.index");
+    Route::get('/projects/create', [ProjectController::class,"create"])->name("projects.create");
+    Route::post('/projects/create}', [ProjectController::class,"store"])->name("projects.store");
+    Route::post('/projects/update/{project:slug}', [ProjectController::class,"update"])->name("projects.update");
+    Route::get('/projects/{project:slug}/edit', [ProjectController::class,"edit"])->name("projects.edit");
+    Route::get('/projects/{project:slug}/destroy', [ProjectController::class,"destroy"])->name("projects.destroy");
 
     Route::get('/categories', [CategoryController::class,"index"])->name("categories.index");
     Route::get('/categories/create', [CategoryController::class,"create"])->name("categories.create");

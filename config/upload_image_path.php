@@ -2,6 +2,7 @@
 return [
     "gallery" => "galleries/",
     "post-thumbnail" => "post-thumbnails/",
+    "project-thumbnail" => "project-thumbnails/",
     "brand-thumbnail" => "brand-thumbnails/",
     "product-thumbnail" => "product-thumbnails/",
     "category-thumbnail" => "category-thumbnails/",
