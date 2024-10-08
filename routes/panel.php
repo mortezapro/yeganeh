@@ -7,6 +7,7 @@ use App\Http\Controllers\Panel\Dashboard\DashboardController;
 use App\Http\Controllers\Panel\PostController;
 use App\Http\Controllers\Panel\ProjectController;
 use App\Http\Controllers\Panel\ScanMessageController;
+use App\Http\Controllers\Panel\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix("panel")->as("panel.")->middleware(['auth'])->group(function () {
@@ -34,6 +35,13 @@ Route::prefix("panel")->as("panel.")->middleware(['auth'])->group(function () {
     Route::post('/categories/update/{category:slug}', [CategoryController::class,"update"])->name("categories.update");
     Route::get('/categories/{category:slug}/edit', [CategoryController::class,"edit"])->name("categories.edit");
     Route::get('/categories/{category:slug}/destroy', [CategoryController::class,"destroy"])->name("categories.destroy");
+
+    Route::get('/tags', [TagController::class,"index"])->name("tags.index");
+    Route::get('/tags/create', [TagController::class,"create"])->name("tags.create");
+    Route::post('/tags/create}', [TagController::class,"store"])->name("tags.store");
+    Route::post('/tags/update/{tag:slug}', [TagController::class,"update"])->name("tags.update");
+    Route::get('/tags/{tag:slug}/edit', [TagController::class,"edit"])->name("tags.edit");
+    Route::get('/tags/{tag:slug}/destroy', [TagController::class,"destroy"])->name("tags.destroy");
 
     Route::get('/scan-messages', [ScanMessageController::class,"index"])->name("scanMessages.index");
     Route::get('/scan-messages/{scanMessage:tracking_code}/edit', [ScanMessageController::class,"edit"])->name("scanMessages.edit");

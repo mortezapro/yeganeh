@@ -25,7 +25,7 @@ class PostController extends Controller
         $topCategories = $this->categoryService->getTopCategories();
         $search = $request->input("search");
         $posts = $this->postService->getAllForBlog(12,$search,$type);
-        return view("front.post.blog",compact("posts","topCategories","type"));
+        return view("front.post.mag",compact("posts","topCategories","type"));
     }
 
     public function category(Request $request, CategoryModel $category = null)
@@ -39,7 +39,8 @@ class PostController extends Controller
     public function single(PostModel $post)
     {
         $topCategories = $this->categoryService->getTopCategories();
-        $relatedPosts = $this->postService->related($post);
-        return view("front.post.single",compact("topCategories","post","relatedPosts"));
+//        $relatedPosts = $this->postService->related($post);
+        $relatedPosts = $this->postService->get([],[],10);
+        return view("front.post.single-new",compact("topCategories","post","relatedPosts"));
     }
 }

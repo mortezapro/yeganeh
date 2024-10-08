@@ -23,7 +23,7 @@ class PostModel extends Model
     protected $casts = [
         'indexable' => 'boolean',
     ];
-    protected $appends = ['captionIndexable','captionStatus'];
+    protected $appends = ['captionIndexable','captionStatus',"userName","persianDate","firstCategory"];
     public function user()
     {
         return $this->belongsTo(User::class,"user_id");
@@ -76,6 +76,24 @@ class PostModel extends Model
         }
     }
 
+    public function getUserNameAttribute($value):string
+    {
+        return $this->user?->name;
+    }
+    public function getFirstCategoryAttribute($value):array
+    {
+        if($this->categories->count() >= 1){
+            return [
+                "title" => $this->categories[0]->title,
+                "slug" => $this->categories[0]->slug,
+            ];
+        }
+        return [
+            "title" => " - ",
+            "slug" => null
+        ];
+    }
+
     public function scopePublished($query)
     {
         return $query->where('status', config("post-status.published"));
@@ -115,4 +133,5 @@ class PostModel extends Model
     {
         return $query->where('type', config("post-type.download"));
     }
+
 }
